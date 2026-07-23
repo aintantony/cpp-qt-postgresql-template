@@ -2,48 +2,11 @@
 
 A C++ desktop application with a Qt6 GUI that connects to a PostgreSQL database using `libpqxx`.
 
-## Project Structure
-
-```
-cpp-gui-postgres/
-├── src/
-│   └── main.cpp               # Entry point
-├── gui/
-│   ├── mainwindow.h
-│   └── mainwindow.cpp         # Qt6 main window
-├── database/
-│   ├── db.h
-│   └── db.cpp                 # PostgreSQL connection (libpqxx)
-├── models/
-│   └── user.h
-├── repositories/
-│   ├── userrepository.h
-│   └── userrepository.cpp
-├── services/
-│   ├── userservice.h
-│   └── userservice.cpp
-├── config/
-│   ├── env.h
-│   └── env.cpp                # .env file loader
-├── .env.example               # Environment variable template
-├── CMakeLists.txt
-└── .vscode/
-    ├── c_cpp_properties.json
-    └── settings.json
-```
-
----
-
 ## Setup
 
 ### Configure Environment Variables
 
 Copy the example env file and fill in your PostgreSQL credentials:
-
-```bash
-cp .env.example .env        # Linux / macOS
-copy .env.example .env      # Windows (Command Prompt)
-```
 
 Edit `.env`:
 ```env
